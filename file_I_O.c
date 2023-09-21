@@ -67,6 +67,8 @@ int func(char *opcode, char *value, int l_num, int type)
 		{"add", add_f},
 		{"sub", sub_f},
 		{"div", div_f},
+		{"mul", mul_f},
+		{"mod", mod_f},
 		{NULL, NULL}};
 
 	if (opcode[0] == '#')

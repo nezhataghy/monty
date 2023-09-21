@@ -50,42 +50,30 @@ extern stack_t *first;
 /*Type for opcode functions*/
 typedef void (*op_func)(stack_t **, unsigned int);
 
+/*Error hanlding*/
 int opening_err(char *filename);
 int push_int_err(unsigned int line_number);
 int malloc_err(void);
 int op_err(char *opcode, unsigned int line_number);
 
-/*File operations*/
+/*File ops*/
 int read_file(FILE *fd);
-int len_chars(FILE *);
 int func(char *, char *, int, int);
 
-/*Stack operations*/
 stack_t *first_node(int n);
 void free_list(void);
-void pall_f(stack_t **new_node, unsigned int line_number);
-void push_f(stack_t **, unsigned int);
-void queue(stack_t **, unsigned int);
 
-void pint_f(stack_t **, unsigned int);
+void push_f(stack_t **, unsigned int);
 void pop_f(stack_t **, unsigned int);
+void pint_f(stack_t **, unsigned int);
+void pall_f(stack_t **new_node, unsigned int line_number);
+void queue(stack_t **, unsigned int);
 void nop(stack_t **, unsigned int);
 void swap_f(stack_t **, unsigned int);
-
-/*Math operations with nodes*/
 void add_f(stack_t **, unsigned int);
 void sub_f(stack_t **, unsigned int);
 void div_f(stack_t **, unsigned int);
 void mul_f(stack_t **, unsigned int);
 void mod_f(stack_t **, unsigned int);
-
-/*String operations*/
-void print_char(stack_t **, unsigned int);
-void print_str(stack_t **, unsigned int);
-void rotl(stack_t **, unsigned int);
-
-/*Error hanlding*/
-void string_err(int error_code, ...);
-void rotr(stack_t **, unsigned int);
 
 #endif
