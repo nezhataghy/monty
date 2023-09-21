@@ -23,7 +23,7 @@ void queue(stack_t **new_node, unsigned int l_num)
 		return;
 	}
 	tmp = first;
-	while (tmp->next != NULL)
+	for (; tmp->next;)
 		tmp = tmp->next;
 
 	tmp->next = *new_node;

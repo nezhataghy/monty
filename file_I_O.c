@@ -69,6 +69,10 @@ int func(char *opcode, char *value, int l_num, int type)
 		{"div", div_f},
 		{"mul", mul_f},
 		{"mod", mod_f},
+		{"pchar", pchar_f},
+		{"pstr", pstr_f},
+		{"rotl", rotl_f},
+		{"rotr", rotr_f},
 		{NULL, NULL}};
 
 	if (opcode[0] == '#')
@@ -87,11 +91,10 @@ int func(char *opcode, char *value, int l_num, int type)
 				}
 				if (value == NULL)
 					return (push_int_err(l_num));
-				while (*(value + j) != '\0')
+				for (; *(value + j) != '\0'; j++)
 				{
 					if (isdigit(*(value + j) == 0))
 						return (push_int_err(l_num));
-					j++;
 				}
 				element = first_node(signe * atoi(value));
 				if (type == 1)

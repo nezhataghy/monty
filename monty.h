@@ -66,7 +66,7 @@ void free_list(void);
 void push_f(stack_t **, unsigned int);
 void pop_f(stack_t **, unsigned int);
 void pint_f(stack_t **, unsigned int);
-void pall_f(stack_t **new_node, unsigned int line_number);
+void pall_f(stack_t **, unsigned int);
 void queue(stack_t **, unsigned int);
 void nop(stack_t **, unsigned int);
 void swap_f(stack_t **, unsigned int);
@@ -75,5 +75,9 @@ void sub_f(stack_t **, unsigned int);
 void div_f(stack_t **, unsigned int);
 void mul_f(stack_t **, unsigned int);
 void mod_f(stack_t **, unsigned int);
+void pchar_f(stack_t **, unsigned int);
+void pstr_f(stack_t **, unsigned int);
+void rotl_f(stack_t **, unsigned int);
+void rotr_f(stack_t **, unsigned int);
 
 #endif
