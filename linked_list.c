@@ -27,12 +27,12 @@ void free_list(void)
 {
 	stack_t *ptr_tmp;
 
-	if (head)
+	if (first)
 	{
-		while (head)
+		while (first)
 		{
-			ptr_tmp = head;
-			head = head->next;
+			ptr_tmp = first;
+			first = first->next;
 			free(ptr_tmp);
 		}
 	}

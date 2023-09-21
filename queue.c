@@ -17,12 +17,12 @@ void queue(stack_t **new_node, unsigned int l_num)
 		exit(EXIT_FAILURE);
 	}
 
-	if (head == NULL)
+	if (first == NULL)
 	{
-		head = *new_node;
+		first = *new_node;
 		return;
 	}
-	tmp = head;
+	tmp = first;
 	while (tmp->next != NULL)
 		tmp = tmp->next;
 

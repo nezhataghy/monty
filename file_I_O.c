@@ -98,7 +98,7 @@ int func(char *opcode, char *value, int l_num, int type)
 					array_func[i].f(&element, l_num);
 			}
 			else
-				array_func[i].f(&head, l_num);
+				array_func[i].f(&first, l_num);
 
 			flag = 0;
 		}

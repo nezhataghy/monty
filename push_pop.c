@@ -17,15 +17,15 @@ void push_f(stack_t **new_node, unsigned int l_num)
 		fclose(f_d);
 		exit(EXIT_FAILURE);
 	}
-	if (head == NULL)
+	if (first == NULL)
 	{
-		head = *new_node;
+		first = *new_node;
 		return;
 	}
-	tmp = head;
-	head = *new_node;
-	head->next = tmp;
-	tmp->prev = head;
+	tmp = first;
+	first = *new_node;
+	first->next = tmp;
+	tmp->prev = first;
 }
 
 /**
