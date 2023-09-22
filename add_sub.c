@@ -7,7 +7,7 @@
  */
 void add_f(stack_t **new_node, unsigned int l_num)
 {
-	int somme;
+	int result;
 
 	if (!(new_node) || !(*new_node) || !((*new_node)->next))
 	{
@@ -18,8 +18,8 @@ void add_f(stack_t **new_node, unsigned int l_num)
 		exit(EXIT_FAILURE);
 	}
 	(*new_node) = (*new_node)->next;
-	somme = (*new_node)->n + (*new_node)->prev->n;
-	(*new_node)->n = somme;
+	result = (*new_node)->n + (*new_node)->prev->n;
+	(*new_node)->n = result;
 	free((*new_node)->prev);
 	(*new_node)->prev = NULL;
 }
@@ -31,7 +31,7 @@ void add_f(stack_t **new_node, unsigned int l_num)
  */
 void sub_f(stack_t **new_node, unsigned int l_num)
 {
-	int somme;
+	int result;
 
 	if (!(new_node) || !(*new_node) || !((*new_node)->next))
 	{
@@ -42,8 +42,8 @@ void sub_f(stack_t **new_node, unsigned int l_num)
 		exit(EXIT_FAILURE);
 	}
 	(*new_node) = (*new_node)->next;
-	somme = (*new_node)->n - (*new_node)->prev->n;
-	(*new_node)->n = somme;
+	result = (*new_node)->n - (*new_node)->prev->n;
+	(*new_node)->n = result;
 	free((*new_node)->prev);
 	(*new_node)->prev = NULL;
 }
