@@ -16,6 +16,8 @@ void mul_f(stack_t **new_node, unsigned int l_num)
 		free(buffer);
 		buffer = NULL;
 		fclose(f_d);
+		if (*new_node)
+			free_dlistint();
 		exit(EXIT_FAILURE);
 	}
 
