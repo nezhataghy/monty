@@ -15,11 +15,9 @@ void mul_f(stack_t **new_node, unsigned int l_num)
 		fprintf(stderr, "L%d: can't mul, stack too short\n", l_num);
 		free(buffer);
 		buffer = NULL;
-		free_list(*new_node);
 		fclose(f_d);
 		exit(EXIT_FAILURE);
 	}
-
 	(*new_node)->next->n *= (*new_node)->n;
 	*new_node = (*new_node)->next;
 	free((*new_node)->prev);
@@ -34,30 +32,24 @@ void mul_f(stack_t **new_node, unsigned int l_num)
  */
 void mod_f(stack_t **new_node, unsigned int l_num)
 {
-	int result;
-
 	if (!(new_node) || !(*new_node))
 	{
 		fprintf(stderr, "L%d: can't mod, stack too short\n", l_num);
 		free(buffer);
 		buffer = NULL;
-		free_list(*new_node);
 		fclose(f_d);
 		exit(EXIT_FAILURE);
 	}
-
 	if ((*new_node)->n == 0)
 	{
 		fprintf(stderr, "L%d: division by zero\n", l_num);
 		free(buffer);
 		buffer = NULL;
-		free_list(*new_node);
 		fclose(f_d);
 		exit(EXIT_FAILURE);
 	}
-	(*new_node) = (*new_node)->next;
-	result = (*new_node)->n % (*new_node)->prev->n;
-	(*new_node)->n = result;
+	(*new_node)->next->n %= (*new_node)->n;
+	*new_node = (*new_node)->next;
 	free((*new_node)->prev);
 	(*new_node)->prev = NULL;
 }
