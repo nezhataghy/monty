@@ -9,7 +9,6 @@
 void mul_f(stack_t **new_node, unsigned int l_num)
 
 {
-	int result;
 
 	if (!(new_node) || !(*new_node) || !((*new_node)->next))
 	{
