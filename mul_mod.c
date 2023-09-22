@@ -12,7 +12,7 @@ void mul_f(stack_t **new_node, unsigned int l_num)
 
 	if (!(new_node) || !(*new_node) || !((*new_node)->next))
 	{
-		fprintf(stderr, "L%d: can't div, stack too short\n", l_num);
+		fprintf(stderr, "L%d: can't mul, stack too short\n", l_num);
 		free(buffer);
 		buffer = NULL;
 		free_list(*new_node);
@@ -38,7 +38,7 @@ void mod_f(stack_t **new_node, unsigned int l_num)
 
 	if (!(new_node) || !(*new_node))
 	{
-		fprintf(stderr, "L%d: can't mul, new_node too short\n", l_num);
+		fprintf(stderr, "L%d: can't mod, new_node too short\n", l_num);
 		free(buffer);
 		buffer = NULL;
 		free_list(*new_node);
