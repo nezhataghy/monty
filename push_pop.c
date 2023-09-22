@@ -10,7 +10,7 @@ void push_f(stack_t **new_node, unsigned int l_num)
 	stack_t *tmp;
 
 	(void)l_num;
-	if (new_node == NULL || *new_node == NULL)
+	if (!(new_node) || !(*new_node))
 	{
 		free(buffer);
 		buffer = NULL;
@@ -37,11 +37,12 @@ void pop_f(stack_t **new_node, unsigned int l_num)
 {
 	stack_t *ptr_ptr;
 
-	if (new_node == NULL || *new_node == NULL)
+	if (!(new_node) || !(*new_node))
 	{
 		fprintf(stderr, "L%d: can't pop an empty stack\n", l_num);
 		free(buffer);
 		buffer = NULL;
+		free_list();
 		fclose(f_d);
 		exit(EXIT_FAILURE);
 	}

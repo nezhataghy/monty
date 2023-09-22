@@ -9,7 +9,7 @@ void queue(stack_t **new_node, unsigned int l_num)
 	stack_t *tmp;
 
 	(void)l_num;
-	if (new_node == NULL || *new_node == NULL)
+	if (!(new_node) || !(*new_node))
 	{
 		free(buffer);
 		buffer = NULL;
