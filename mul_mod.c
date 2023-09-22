@@ -1,7 +1,7 @@
 #include "monty.h"
 
 /**
- * mul - multiplies the second top element
+ * mul_f - multiplies the second top element
  * of the stack with the top element
  * @new_node: double pointer to the node
  * @l_num: line number of of the opcode.
