@@ -10,7 +10,7 @@ void rotl_f(stack_t **new_node, unsigned int l_num)
     stack_t *ptr_tmp;
 
     (void)l_num;
-    if (!(new_node == NULL || *new_node == NULL || (*new_node)->next == NULL))
+    if (!(!(new_node) || !(*new_node) || !((*new_node)->next)))
     {
         ptr_tmp = *new_node;
         for (; ptr_tmp->next;)
@@ -36,7 +36,7 @@ void rotr_f(stack_t **new_node, unsigned int l_num)
     stack_t *ptr_tmp;
 
     (void)l_num;
-    if (!(new_node == NULL || *new_node == NULL || (*new_node)->next == NULL))
+    if (!(!(new_node) || !(*new_node) || !((*new_node)->next)))
     {
         ptr_tmp = *new_node;
 

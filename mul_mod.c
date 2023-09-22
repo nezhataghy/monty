@@ -10,11 +10,12 @@ void mul_f(stack_t **new_node, unsigned int l_num)
 {
 	int somme;
 
-	if (new_node == NULL || *new_node == NULL || (*new_node)->next == NULL)
+	if (!(new_node) || !(*new_node) || !((*new_node)->next))
 	{
 		fprintf(stderr, "L%d: can't mul, new_node too short\n", l_num);
 		free(buffer);
 		buffer = NULL;
+		free_list();
 		fclose(f_d);
 		exit(EXIT_FAILURE);
 	}
@@ -36,11 +37,12 @@ void mod_f(stack_t **new_node, unsigned int l_num)
 {
 	int somme;
 
-	if (new_node == NULL || *new_node == NULL || (*new_node)->next == NULL)
+	if (!(new_node) || !(*new_node))
 	{
 		fprintf(stderr, "L%d: can't mul, new_node too short\n", l_num);
 		free(buffer);
 		buffer = NULL;
+		free_list();
 		fclose(f_d);
 		exit(EXIT_FAILURE);
 	}

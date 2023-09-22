@@ -9,7 +9,7 @@ void add_f(stack_t **new_node, unsigned int l_num)
 {
 	int somme;
 
-	if (new_node == NULL || *new_node == NULL || (*new_node)->next == NULL)
+	if (!(new_node) || !(*new_node) || !((*new_node)->next))
 	{
 		fprintf(stderr, "L%d: can't add, stack too short\n", l_num);
 		free(buffer);
@@ -33,7 +33,7 @@ void sub_f(stack_t **new_node, unsigned int l_num)
 {
 	int somme;
 
-	if (new_node == NULL || *new_node == NULL || (*new_node)->next == NULL)
+	if (!(new_node) || !(*new_node) || !((*new_node)->next))
 	{
 		fprintf(stderr, "L%d: can't sub, stack too short\n", l_num);
 		free(buffer);
