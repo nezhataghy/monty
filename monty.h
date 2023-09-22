@@ -59,7 +59,7 @@ int read_file(FILE *fd);
 int func(char *, char *, int, int);
 
 stack_t *first_node(int n);
-void free_list(void);
+void free_list(stack_t *first);
 
 void push_f(stack_t **, unsigned int);
 void pop_f(stack_t **, unsigned int);

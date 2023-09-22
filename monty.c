@@ -26,6 +26,6 @@ int main(int argc, char **argv)
 
 	exit_stat = read_file(f_d);
 	fclose(f_d);
-	free_list();
+	free_list(first);
 	return (exit_stat);
 }

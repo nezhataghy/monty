@@ -17,7 +17,7 @@ void mul_f(stack_t **new_node, unsigned int l_num)
 		buffer = NULL;
 		fclose(f_d);
 		if (*new_node)
-			free_list();
+			free_list(*new_node);
 		exit(EXIT_FAILURE);
 	}
 
@@ -42,7 +42,8 @@ void mod_f(stack_t **new_node, unsigned int l_num)
 		fprintf(stderr, "L%d: can't mul, new_node too short\n", l_num);
 		free(buffer);
 		buffer = NULL;
-		free_list();
+		if (*new_node)
+			free_list(*new_node);
 		fclose(f_d);
 		exit(EXIT_FAILURE);
 	}

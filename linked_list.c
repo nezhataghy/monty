@@ -22,8 +22,10 @@ stack_t *first_node(int n)
 
 /**
  * free_list - Frees nodes in the stack.
+ * @first: head
  */
-void free_list(void)
+
+void free_list(stack_t *first)
 {
 	stack_t *ptr_tmp;
 
