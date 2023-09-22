@@ -14,6 +14,7 @@ void push_f(stack_t **new_node, unsigned int l_num)
 	{
 		free(buffer);
 		buffer = NULL;
+		free_list();
 		fclose(f_d);
 		exit(EXIT_FAILURE);
 	}
