@@ -51,6 +51,7 @@ void mod_f(stack_t **new_node, unsigned int l_num)
 		fprintf(stderr, "L%d: division by zero\n", l_num);
 		free(buffer);
 		buffer = NULL;
+		free_list(*new_node);
 		fclose(f_d);
 		exit(EXIT_FAILURE);
 	}
