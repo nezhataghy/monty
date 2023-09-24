@@ -32,7 +32,7 @@ void mul_f(stack_t **new_node, unsigned int l_num)
  */
 void mod_f(stack_t **new_node, unsigned int l_num)
 {
-	if (!(new_node) || !(*new_node))
+	if (!(new_node) || !(*new_node) || !((*new_node)->next))
 	{
 		fprintf(stderr, "L%d: can't mod, stack too short\n", l_num);
 		free(buffer);
